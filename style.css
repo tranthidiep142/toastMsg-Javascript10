@@ -1,0 +1,144 @@
+body{
+    height: 100vh;
+}
+
+#control{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+}
+
+.btn{
+    width: 200px;
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    margin: 0 10px;
+    color: #fff;
+    font-size: 15px;
+    box-shadow: 0 6px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn:hover{
+    opacity: 0.6;
+    cursor: pointer;
+}
+
+.btn--success{
+    background-color: green;
+}
+
+.btn--error{
+    background-color: crimson;
+}
+
+#toast {
+    position: fixed;
+    right: 32px;
+    top: 32px;
+}
+
+.toast {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 2px;
+    border-left: 4px solid;
+    background-color: #fff;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.08);
+    padding: 20px 10px;
+    margin: 20px 0;
+    max-width: 450px;
+    min-width: 350px;
+    transition: all linear 0.3s;
+    z-index: 10;
+}
+
+@keyframes FadeInLeft{
+    from{
+        opacity: 0;
+        transform: translateX(calc(100% + 32px));
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes FadeOut{
+    to{
+        opacity: 0;
+    }
+}
+
+.type {
+    padding-right: 20px;
+    font-size: 20px;
+}
+
+.toast--success{
+    border-color: green;
+}
+
+.toast--success .type{
+    color: green;
+}
+
+.toast--info{
+    border-color: blue;
+}
+
+.toast--info .type{
+    color: blue;
+}
+
+.toast--error{
+    border-color: crimson;
+}
+
+.toast--error .type{
+    color: crimson;
+}
+
+.toast--warning{
+    border-color: coral;
+}
+
+.toast--warning .type{
+    color: coral;
+}
+
+.body {
+    flex-grow: 1;
+}
+
+.title {
+    font-weight: 700;
+    font-size: 16px;
+    color: #333;
+}
+
+.msg {
+    padding-top: 6px;
+    font-size: 14px;
+    color: #888;
+    line-height: 1.4;
+}
+
+.close {
+    font-size: 20px;
+    color: #888;
+    padding-left: 20px;
+}
+
+.close:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
